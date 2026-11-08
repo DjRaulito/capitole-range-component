@@ -107,6 +107,13 @@ export default function Range(props: RangeProps) {
         onChange={(value) => updateHandle('min', value)}
       />
       <div ref={rangeRef} data-testid='range-track' className={styles.track}>
+        <div
+          className={styles.selected}
+          style={{
+            left: `${toPercent(selectedRange.min)}%`,
+            width: `${toPercent(selectedRange.max) - toPercent(selectedRange.min)}%`,
+          }}
+        />
         <Handle
           percent={toPercent(selectedRange.min)}
           label={MINIMUM_LABEL}

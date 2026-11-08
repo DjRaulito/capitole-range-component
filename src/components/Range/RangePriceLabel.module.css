@@ -1,0 +1,16 @@
+.inputRangePriceLabel {
+  width: 50px;
+  border-color: transparent;
+  text-align: right;
+  font-size: medium;
+}
+
+.labelContainer {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+}
+
+.labelContainer input:focus-visible {
+  outline: 1px solid #111;
+}

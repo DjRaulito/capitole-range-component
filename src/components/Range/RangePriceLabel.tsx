@@ -2,6 +2,7 @@
 
 import { parsePrice, roundToCents } from '@/lib/range/price'
 import { useState } from 'react'
+import styles from './RangePriceLabel.module.css'
 
 export default function RangePriceLabel({
   value,
@@ -17,9 +18,10 @@ export default function RangePriceLabel({
   const [inputValue, setInputValue] = useState<string | null>(null)
 
   return (
-    <>
+    <span className={styles.labelContainer}>
       {editable ? (
         <input
+          className={styles.inputRangePriceLabel}
           type='text'
           inputMode='decimal'
           aria-label={label}
@@ -37,6 +39,6 @@ export default function RangePriceLabel({
         <span>{roundToCents(value)}</span>
       )}
       <span>€</span>
-    </>
+    </span>
   )
 }

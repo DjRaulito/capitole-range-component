@@ -1,0 +1,33 @@
+.header {
+  width: 100%;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 12px 16px;
+}
+
+.link {
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: #444;
+  font-size: 14px;
+}
+
+.link:hover {
+  background: #f2f2f2;
+}
+
+.active {
+  background: #111;
+  color: #fff;
+}
+
+.active:hover {
+  background: #111;
+}
