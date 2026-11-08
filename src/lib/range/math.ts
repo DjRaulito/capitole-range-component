@@ -24,3 +24,20 @@ export function percentToValue(
   const clampedPercent = clampValue(percent, 0, 100)
   return roundToCents(min + (clampedPercent / 100) * (max - min))
 }
+
+export function indexToPercent(index: number, count: number): number {
+  if (count <= 1) {
+    return 0
+  }
+  const percent = (index / (count - 1)) * 100
+  return clampValue(percent, 0, 100)
+}
+
+export function percentToIndex(percent: number, count: number): number {
+  if (count <= 1) {
+    return 0
+  }
+  const clampedPercent = clampValue(percent, 0, 100)
+  const index = (clampedPercent / 100) * (count - 1)
+  return Math.round(index)
+}

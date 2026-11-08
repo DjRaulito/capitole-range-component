@@ -1,0 +1,14 @@
+.rangeContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.track {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+  height: 4px;
+  border-radius: 2px;
+  background: #111;
+}
